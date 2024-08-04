@@ -9,7 +9,7 @@ const router= Router();
 router.get('/receberip', async (req,res) => {
 try{
     const dados = await receberip();
-    fs.writeFileSync('ip_info.json', JSON.stringify(dados, null, 2), 'utf-8');
+    fs.writeFileSync(`ip_infoR.json`, JSON.stringify(dados, null, 2), 'utf-8');
     res.json('');
 } catch(err){
     res.status(500).json({
