@@ -1,0 +1,33 @@
+{
+  
+    "name": "ip",
+  
+    "version": "1.0.0",
+  
+    "main": "server.js",
+  
+    "type": "module",
+  
+    "scripts": {
+  
+      
+    "start": "node server.js"
+  
+    },
+  
+    "dependencies": {
+  
+      
+    "express": "^4.17.1",
+  
+      
+    "fs": "^0.0.1-security",
+  
+      
+    "request": "^2.88.2"
+  
+    },
+    "engines": {
+        "node": "18.19.1"
+      }
+}
