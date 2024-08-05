@@ -1,15 +1,13 @@
-import { Router } from 'express';
-import { receberip } from './service.js';
+import { router} from './routes.js';
+import express from 'express';
 
-const router = Router();
+const server = express();
+const port=3000
 
-router.get('/receberip', async (req, res) => {
-    try {
-        const dados = await receberip();
-        res.json(dados);
-    } catch (error) {
-        res.status(500).json({ error: 'Erro ao obter IP' });
-    }
-});
+server.use(router);
 
-export { router };
+server.listen(port, () => {
+    console.log("server rodando na porta" + port);
+})
+
+
