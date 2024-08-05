@@ -21,7 +21,7 @@ try{
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const filePath = path.join(pastaDestino, `ip_info_${timestamp}.json`); // na parte do replae estou falando, olha quando for criar a string na coloque dois pontos substitua por -
     fs.writeFileSync(filePath, JSON.stringify(dados, null, 2), 'utf-8');
-    res.json('');
+    res.status(200).json("")
 } catch(err){
     res.status(500).json({
       error:"internal server error"
