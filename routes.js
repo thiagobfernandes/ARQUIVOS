@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url)); // importando e confi
 
 const router= Router();
 
-router.get('/receberip', async (req,res) => {
+router.get('/', async (req,res) => {
 try{
     const dados = await receberip();
     const pastaDestino = path.join(__dirname, 'ips')
